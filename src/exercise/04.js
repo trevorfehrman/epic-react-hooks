@@ -6,7 +6,6 @@ import React, {useState} from 'react'
 function Board() {
   const [states, setStates] = useState([Array(9).fill(null)])
   const [step, setStep] = useState(states.length - 1)
-  // const [squares, setSquares] = useState(() => Array(9).fill(null))
 
   let nextValue = calculateNextValue(states[step])
   let winner = calculateWinner(states[step])
@@ -27,7 +26,6 @@ function Board() {
   }
 
   function restart() {
-    // setSquares(Array(9).fill(null))
     setStep(0)
     setStates([Array(9).fill(null)])
   }
